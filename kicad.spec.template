@@ -51,9 +51,10 @@ BuildRequires:  gettext
 BuildRequires:  glm-devel
 BuildRequires:  libcurl-devel
 Requires:       electronics-menu
-Requires:	wxPython
+Requires:       wxPython
 Requires:       python
-Requires: 	libcurl
+Requires:       libcurl
+Requires:       compat-wxGTK3-gtk2
 
 %if 0%{?el7}
 %else
@@ -104,7 +105,7 @@ iconv -f iso8859-1 -t utf-8 AUTHORS.txt > AUTHORS.conv && mv -f AUTHORS.conv AUT
 
 %build
 
-ln -s $(which wx-config-3.0) ./wx-config
+ln -s $(which wx-config-3.0-gtk2) ./wx-config
 export PATH=$(pwd):$PATH
 
 

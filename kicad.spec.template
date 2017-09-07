@@ -105,8 +105,8 @@ iconv -f iso8859-1 -t utf-8 AUTHORS.txt > AUTHORS.conv && mv -f AUTHORS.conv AUT
 
 %build
 
-ln -s $(which wx-config-3.0-gtk2) ./wx-config
-export PATH=$(pwd):$PATH
+#ln -s $(which wx-config-3.0-gtk2) ./wx-config
+#export PATH=$(pwd):$PATH
 
 
 # Add Epcos library
@@ -147,7 +147,8 @@ fi
 				  -DKICAD_SCRIPTING=ON \
 				  -DKICAD_SCRIPTING_MODULES=ON \
 				  -DKICAD_SCRIPTING_WXPYTHON=ON \
-                  -DCMAKE_BUILD_TYPE=Debug
+                  -DCMAKE_BUILD_TYPE=Debug \
+                  -DwxWidgets_CONFIG_EXECUTABLE=%{_bindir}/wx-config-3.0-gtk2
 # workaround to get WXPYTHON_VERSION set in config.h
 make rebuild_cache
 # end workaround

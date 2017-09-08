@@ -3,9 +3,9 @@
 
 Name:           kicad
 Version:        REVISION_NUMBER
-# Higher epoch than stable builds to make sure your nightly builds are prioritized
-# if you enabled the nightly build repo
-Epoch:          100
+# Higher epoch than stable builds to make sure nightly builds are prioritized,
+# higher epoch than what was used in the mangelajo copr
+Epoch:          101
 Release:        nightlies%{?dist}
 Summary:        Electronic schematic diagrams and printed circuit board artwork
 Summary(fr):    Saisie de schéma électronique et routage de circuit imprimé

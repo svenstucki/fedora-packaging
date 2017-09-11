@@ -1,4 +1,14 @@
+# sources
 kicad-*.tar.gz
+kicad.bzr/
+kicad-i18n/
+kicad-library.bzr/
 
+# generated files
 kicad.spec
 sources
+*.rpm
+
+# vim swap files
+*.swp
+*.swo
